@@ -67,7 +67,7 @@ docker run -d \
   --volume=/mapfiles/wfs.map/:/etc/mapserver/wfs.map:ro \
   --volume=/mapdata/wms/:/mapdata/wms/:ro \
   --volume=/mapdata/wfs/:/mapdata/wfs/:ro \
-  camptocamp/mapserver
+  ssddgreg/mapserver
 ```
 
 For accessing maps for the WFS service add `map=/etc/mapserver/wfs.map` to
@@ -115,6 +115,6 @@ The landing page is served by on `http://<host>:<port>/<base_path>/<map_name>/og
 Install the pre-commit hooks:
 
 ```bash
-pip install pre-commit
+pip3 install pre-commit
 pre-commit install --allow-missing-config
 ```

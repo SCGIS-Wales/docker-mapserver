@@ -1,7 +1,6 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-small-3.12.0 AS gdal
+FROM ghcr.io/osgeo/gdal:ubuntu-small-latest AS gdal
 
 FROM gdal AS builder
-LABEL maintainer="Camptocamp <info@camptocamp.com>"
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
 RUN --mount=type=cache,target=/var/cache,sharing=locked \
@@ -69,7 +68,6 @@ RUN ninja install \
     && if test "${WITH_ORACLE}" = "ON"; then rm -rf /usr/local/lib/sdk; fi
 
 FROM gdal AS runner
-LABEL maintainer="Camptocamp <info@camptocamp.com>"
 SHELL ["/bin/bash", "-o", "pipefail", "-cux"]
 
 # Let's copy a few of the settings from /etc/init.d/apache2

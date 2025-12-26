@@ -2,7 +2,7 @@
 
 docker:
   images:
-    - name: camptocamp/mapserver
+    - name: ssddgreg/mapserver
       tags:
         - '{version}'
         - '{version}-arm64'

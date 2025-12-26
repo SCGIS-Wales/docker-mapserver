@@ -2,7 +2,7 @@ DOCKER_TAG ?= latest
 export DOCKER_TAG
 MAPSERVER_BRANCH ?= main
 WITH_ORACLE ?= OFF
-DOCKER_IMAGE ?= camptocamp/mapserver
+DOCKER_IMAGE ?= ssddgreg/mapserver
 ROOT = $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 GID = $(shell id -g)
 UID = $(shell id -u)
