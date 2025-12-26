@@ -118,4 +118,3 @@ Install the pre-commit hooks:
 pip3 install pre-commit
 pre-commit install --allow-missing-config
 ```
-
